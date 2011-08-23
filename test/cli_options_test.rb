@@ -8,9 +8,9 @@ class Tqurl::Options::Test < Test::Unit::TestCase
 
   def test_base_url_is_built_from_protocol_and_host
     options.protocol = 'http'
-    options.host     = 'api.twitter.com'
+    options.host     = 'api.twidaq.com'
 
-    assert_equal 'http://api.twitter.com', options.base_url
+    assert_equal 'http://api.twidaq.com', options.base_url
   end
 
   def test_ssl_is_enabled_if_the_protocol_is_https

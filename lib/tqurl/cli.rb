@@ -201,7 +201,7 @@ module Tqurl
       end
 
       def host
-        on('-H', '--host [host]', 'Specify host to make requests to (default: api.twitter.com)') do |host|
+        on('-H', '--host [host]', 'Specify host to make requests to (default: api.twidaq.com)') do |host|
           options.host = host
         end
       end
@@ -242,8 +242,8 @@ module Tqurl
 
   class Options < OpenStruct
     DEFAULT_REQUEST_METHOD = 'get'
-    DEFAULT_HOST           = 'api.twitter.com'
-    DEFAULT_PROTOCOL       = 'https'
+    DEFAULT_HOST           = 'api.twidaq.com'
+    DEFAULT_PROTOCOL       = 'http'
 
     def oauth_client_options
       OAuthClient::OAUTH_CLIENT_OPTIONS.inject({}) do |options, option|

@@ -7,7 +7,7 @@ class Tqurl::OAuthClient::AbstractOAuthClientTest < Test::Unit::TestCase
 
     @options                = Tqurl::Options.test_exemplar
     @client                 = Tqurl::OAuthClient.test_exemplar
-    options.base_url        = 'api.twitter.com'
+    options.base_url        = 'api.twidaq.com'
     options.request_method  = 'get'
     options.path            = '/path/does/not/matter.xml'
     options.data            = {}

@@ -2,7 +2,9 @@
 | Tqurl |
 +-------+
 
-Tqurl is like curl, but tailored specifically for the Twitter API.
+Tqurl is basically twurl - with a modified default host!
+
+Twurl is like curl, but tailored specifically for the Twitter API.
 It knows how to grant an access token to a client application for
 a specified user and then sign all requests with that access token.
 

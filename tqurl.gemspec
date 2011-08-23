@@ -4,15 +4,15 @@ require File.expand_path("../lib/tqurl/version", __FILE__)
 Gem::Specification.new do |s|
   s.name = "tqurl"
   s.version = Tqurl::Version
-  s.authors = ["Marcel Molina", "Raffi Krikorian"]
+  s.authors = ["Marcel Molina", "Raffi Krikorian" "Jim Morrison"]
   s.default_executable = "tqurl"
-  s.description = %q{Curl for the Twitter API}
-  s.email = ["marcel@twitter.com", "raffi@twitter.com"]
+  s.description = %q{Curl for the twiDAQ API}
+  s.email = ["marcel@twitter.com", "raffi@twitter.com", "jim@twidaq.com"]
   s.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.extra_rdoc_files = %w(README COPYING INSTALL)
   s.files = `git ls-files`.split("\n")
   s.homepage = "http://github.com/marcel/tqurl"
-  s.rdoc_options = ["--title", "tqurl -- OAuth-enabled curl for the Twitter API", "--main", "README", "--line-numbers", "--inline-source"]
+  s.rdoc_options = ["--title", "tqurl -- OAuth-enabled curl for the twiDAQ API (Borrowed entirely from twurl)", "--main", "README", "--line-numbers", "--inline-source"]
   s.require_paths = ["lib"]
   s.rubyforge_project = "tqurl"
   s.required_rubygems_version = Gem::Requirement.new(">= 1.3.6") if s.respond_to? :required_rubygems_version=
