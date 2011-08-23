@@ -1,4 +1,4 @@
-module Twurl
+module Tqurl
   module VERSION
     MAJOR  = '0' unless defined? MAJOR
     MINOR  = '6' unless defined? MINOR

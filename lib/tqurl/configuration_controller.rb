@@ -1,4 +1,4 @@
-module Twurl
+module Tqurl
   class ConfigurationController < AbstractCommandController
     UNRECOGNIZED_SETTING_MESSAGE = "Unknown configuration setting: '%s'"
     def dispatch

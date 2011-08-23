@@ -1,4 +1,4 @@
-module Twurl
+module Tqurl
   class OAuthClient
     class << self
       def rcfile(reload = false)
@@ -108,7 +108,7 @@ module Twurl
         v =~ /"(.*?)"/
         "#{k}=#{CGI::escape($1)}"
       }.join('&')
-      "#{Twurl.options.base_url}#{request.path}?#{params}"
+      "#{Tqurl.options.base_url}#{request.path}?#{params}"
     end
 
     def pin_auth_parameters
@@ -151,8 +151,8 @@ module Twurl
     end
 
     def configure_http!
-      consumer.http.set_debug_output(Twurl.options.debug_output_io) if Twurl.options.trace
-      if Twurl.options.ssl?
+      consumer.http.set_debug_output(Tqurl.options.debug_output_io) if Tqurl.options.trace
+      if Tqurl.options.ssl?
         consumer.http.use_ssl     = true
         consumer.http.verify_mode = OpenSSL::SSL::VERIFY_NONE
       end
@@ -163,7 +163,7 @@ module Twurl
         OAuth::Consumer.new(
           consumer_key,
           consumer_secret,
-          :site => Twurl.options.base_url
+          :site => Tqurl.options.base_url
         )
     end
 

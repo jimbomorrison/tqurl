@@ -1,6 +1,6 @@
-module Twurl
+module Tqurl
   class RCFile
-    FILE = '.twurlrc'
+    FILE = '.tqurlrc'
     @directory ||= ENV['HOME']
     class << self
       attr_accessor :directory

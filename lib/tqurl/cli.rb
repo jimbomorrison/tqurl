@@ -1,4 +1,4 @@
-module Twurl
+module Tqurl
   class CLI
     SUPPORTED_COMMANDS     = %w(authorize accounts alias set)
     DEFAULT_COMMAND        = 'request'
@@ -29,23 +29,23 @@ module Twurl
                        RequestController
                      end
         controller.dispatch(client, options)
-      rescue Twurl::Exception => exception
+      rescue Tqurl::Exception => exception
         abort(exception.message)
       end
 
       def parse_options(args)
         arguments = args.dup
 
-        Twurl.options         = Options.new
-        Twurl.options.trace   = false
-        Twurl.options.data    = {}
-        Twurl.options.headers = {}
+        Tqurl.options         = Options.new
+        Tqurl.options.trace   = false
+        Tqurl.options.data    = {}
+        Tqurl.options.headers = {}
 
         option_parser = OptionParser.new do |o|
           o.extend AvailableOptions
 
-          o.banner = "Usage: twurl authorize -u username -p password --consumer-key HQsAGcVm5MQT3n6j7qVJw --consumer-secret asdfasd223sd2\n" +
-                     "       twurl [options] /statuses/home_timeline.xml\n"                                                                  +
+          o.banner = "Usage: tqurl authorize -u username -p password --consumer-key HQsAGcVm5MQT3n6j7qVJw --consumer-secret asdfasd223sd2\n" +
+                     "       tqurl [options] /statuses/home_timeline.xml\n"                                                                  +
                      "\n"                                                                                                                    +
                      "Supported Commands:\n#{SUPPORTED_COMMANDS.sort.join(', ')}"
 
@@ -76,10 +76,10 @@ module Twurl
         end
 
         arguments                 = option_parser.parse!(args)
-        Twurl.options.command     = extract_command!(arguments)
-        Twurl.options.path        = extract_path!(arguments)
-        Twurl.options.subcommands = arguments
-        Twurl.options
+        Tqurl.options.command     = extract_command!(arguments)
+        Tqurl.options.path        = extract_path!(arguments)
+        Tqurl.options.subcommands = arguments
+        Tqurl.options
       end
 
       def print(*args, &block)
@@ -125,7 +125,7 @@ module Twurl
 
     module AvailableOptions
       def options
-        Twurl.options
+        Tqurl.options
       end
 
       def section(heading, &block)
@@ -136,7 +136,7 @@ module Twurl
       end
 
       def tutorial
-        on('-T', '--tutorial', "Narrative overview of how to get started using Twurl") do
+        on('-T', '--tutorial', "Narrative overview of how to get started using Tqurl") do
           CLI.puts IO.read(README)
           exit
         end

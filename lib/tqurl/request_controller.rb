@@ -1,4 +1,4 @@
-module Twurl
+module Tqurl
   class RequestController < AbstractCommandController
     NO_URI_MESSAGE = "No URI specified"
     def dispatch

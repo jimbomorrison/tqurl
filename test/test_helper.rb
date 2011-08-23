@@ -1,5 +1,5 @@
 $:.unshift File.dirname(__FILE__) + '/../lib'
-require 'twurl'
+require 'tqurl'
 require 'test/unit'
 require 'rr'
 
@@ -7,9 +7,9 @@ class Test::Unit::TestCase
   include RR::Adapters::TestUnit
 end
 
-Twurl::RCFile.directory = ENV['TMPDIR']
+Tqurl::RCFile.directory = ENV['TMPDIR']
 
-module Twurl
+module Tqurl
   class Options
     class << self
       def test_exemplar
@@ -27,7 +27,7 @@ module Twurl
   class OAuthClient
     class << self
       def test_exemplar(overrides = {})
-        options = Twurl::Options.test_exemplar
+        options = Tqurl::Options.test_exemplar
 
         overrides.each do |attribute, value|
           options.send("#{attribute}=", value)

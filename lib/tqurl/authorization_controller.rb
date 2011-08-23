@@ -1,4 +1,4 @@
-module Twurl
+module Tqurl
   class AuthorizationController < AbstractCommandController
     AUTHORIZATION_FAILED_MESSAGE    = "Authorization failed. Check that your consumer key and secret are correct, as well as username and password."
     AUTHORIZATION_SUCCEEDED_MESSAGE = "Authorization successful"

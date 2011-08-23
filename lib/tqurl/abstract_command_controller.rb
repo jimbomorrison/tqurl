@@ -1,4 +1,4 @@
-module Twurl
+module Tqurl
   # Subclasses need to implement a `dispatch' instance method.
   class AbstractCommandController
     attr_reader :client, :options

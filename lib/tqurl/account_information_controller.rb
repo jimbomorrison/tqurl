@@ -1,4 +1,4 @@
-module Twurl
+module Tqurl
   class AccountInformationController < AbstractCommandController
     NO_AUTHORIZED_ACCOUNTS_MESSAGE = "No authorized accounts"
 

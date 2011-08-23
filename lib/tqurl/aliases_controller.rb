@@ -1,6 +1,6 @@
-module Twurl
+module Tqurl
   class AliasesController < AbstractCommandController
-    NO_ALIASES_MESSAGE       = "No aliases exist. Set one this way: twurl alias h /1/statuses/home_timeline.xml"
+    NO_ALIASES_MESSAGE       = "No aliases exist. Set one this way: tqurl alias h /1/statuses/home_timeline.xml"
     NO_PATH_PROVIDED_MESSAGE = "No path was provided to alias. Paths must start with a forward slash (ex. /1/statuses/update.xml)."
     def dispatch
       case options.subcommands.size

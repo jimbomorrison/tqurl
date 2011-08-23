@@ -3,7 +3,7 @@ require 'rake'
 require 'rake/testtask'
 require 'rake/gempackagetask'
 
-require File.dirname(__FILE__) + '/lib/twurl'
+require File.dirname(__FILE__) + '/lib/tqurl'
 
 library_root = File.dirname(__FILE__)
 
@@ -30,7 +30,7 @@ namespace :test do
 end
 
 namespace :dist do
-  spec = Gem::Specification.load('twurl.gemspec')
+  spec = Gem::Specification.load('tqurl.gemspec')
 
   Rake::GemPackageTask.new(spec) do |pkg|
     pkg.need_tar_gz = true
